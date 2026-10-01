@@ -1,5 +1,6 @@
+# ML pipeline dependencies. The backend package (finsight_api) is installed
+# alongside from the repo root: pip install -e "backend[dev]" -r ml/requirements.txt
 scikit-learn==1.9.1
 scipy
 numpy
 pytest
--e ../backend
