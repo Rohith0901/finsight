@@ -55,6 +55,21 @@ class Repository {
     await updateBalance(alias, balancePaise, ts);
   }
 
+  /// The savings account with the newest known balance (used to build test
+  /// messages that debit a real account in the app).
+  Future<({String mask, int balancePaise})?> latestSavingsAccount() async {
+    final rows = await db.rawQuery(
+        "SELECT mask, last_balance_paise AS b FROM accounts WHERE kind = 'savings' "
+        'AND last_balance_paise IS NOT NULL ORDER BY balance_ts DESC LIMIT 1');
+    if (rows.isEmpty) return null;
+    return (mask: rows.first['mask'] as String, balancePaise: rows.first['b'] as int);
+  }
+
+  Future<Txn?> lastInserted() async {
+    final rows = await db.query('transactions', orderBy: 'id DESC', limit: 1);
+    return rows.isEmpty ? null : Txn.fromRow(rows.first);
+  }
+
   /// Sum of the latest known balances of savings accounts. Debit-card balances
   /// are only used when no savings balance is known (they describe the same
   /// account; see docs/tech-debt.md).

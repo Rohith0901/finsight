@@ -1,10 +1,12 @@
 // The app's state and use cases. Screens read from here and call its methods.
 
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 
 import '../api/api_client.dart';
+import '../core/money.dart';
 import '../core/rules.dart';
 import '../data/models.dart';
 import '../data/repository.dart';
@@ -234,6 +236,91 @@ class AppState extends ChangeNotifier {
       turn.error = 'Something went wrong (${e.runtimeType}).';
     }
     notifyListeners();
+  }
+
+  // ------------------------------------------------------------ test messages
+
+  /// Ready-made bank messages dated now, with fresh reference numbers. The
+  /// first debits the account whose balance the app knows, so the balance
+  /// drops by exactly the amount. Each is (label, sender, body).
+  Future<List<(String, String, String)>> sampleMessages() async {
+    final now = DateTime.now();
+    String two(int n) => n.toString().padLeft(2, '0');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    final yy = two(now.year % 100);
+    final dashed = '${two(now.day)}-${two(now.month)}-$yy';
+    final r = Random();
+    String ref() => '5${List.generate(11, (_) => r.nextInt(10)).join()}';
+    final acct = await repo.latestSavingsAccount();
+    final mask = acct?.mask ?? '4821';
+    final balance = acct == null || acct.balancePaise < 25000
+        ? ''
+        : ' Avl bal Rs ${rupees(acct.balancePaise - 25000, decimals: true).replaceAll('₹', '')}.';
+    return [
+      ('₹250 UPI payment to Swiggy', 'VM-HDFCBK',
+          'Money Sent! Rs 250.00 from HDFC Bank A/c **$mask to SWIGGY on $dashed. '
+              'UPI Ref No ${ref()}.$balance Not you? Call 18000000000'),
+      ('₹180 debit card at Chaayos', 'JM-ATMSBI',
+          'Dear Customer, your SBI Debit Card ending 8954 was used for Rs.180.00 at Chaayos on '
+              '${two(now.day)}/${two(now.month)}/$yy. If not done by you, call 1800000000 -SBI'),
+      ('₹500 received from a friend', 'AD-KOTAKB-S',
+          'Received Rs.500.00 in your Kotak Bank AC X2802 from RAHUL SINGH on $dashed.UPI Ref:${ref()}.'),
+      ('₹90 UPI to a person, with bank remarks', 'JM-ATMSBI',
+          'Dear UPI user A/C X9174 debited by 90.0 on date ${two(now.day)}${months[now.month - 1]}$yy '
+              'trf to J JOTHIMANI Info:P2A/${ref()} Refno ${ref()}. If not u? call 1800000000. -SBI'),
+      ('OTP (should be ignored)', 'VM-HDFCBK',
+          '${100000 + r.nextInt(900000)} is your OTP for a transaction of Rs 250.00 at SWIGGY. '
+              'Do not share it with anyone. -HDFC Bank'),
+    ];
+  }
+
+  static const _reasons = {
+    'otp': 'it is a one-time password',
+    'promo': 'it is an offer',
+    'declined': 'the payment failed',
+    'request': 'it is a payment request, not a payment',
+    'future': 'it is a reminder of a future payment',
+  };
+
+  /// Runs a message through the same steps as an SMS that just arrived
+  /// (parser, rules, duplicate check) and says what happened.
+  Future<String> simulateSms(String sender, String body) async {
+    final s = sender.trim();
+    final b = body.trim();
+    if (s.isEmpty || b.isEmpty) return 'Enter a sender and a message.';
+    final before = balancePaise;
+    final parsed = pipeline.parser.parse(s, b);
+    final status = await pipeline.ingest(SmsMessage(s, b, DateTime.now()), source: 'test');
+    await _reload();
+    switch (status) {
+      case IngestStatus.inserted:
+        final t = await repo.lastInserted();
+        if (t == null) return 'Recorded.';
+        final verb = t.direction == 'debit' ? 'Debited' : 'Credited';
+        final category =
+            t.categorySource == 'pending' ? 'waiting for a category' : rules.categoryName(t.categoryId);
+        var msg = '$verb ${rupees(t.amountPaise, decimals: true)}: ${t.displayName}, $category.';
+        final after = balancePaise;
+        if (after != null && after != before) {
+          msg += before == null
+              ? '\nBalance now ${rupees(after)}.'
+              : '\nBalance ${rupees(before)} → ${rupees(after)}.';
+        }
+        if (_api != null) unawaited(_run('Updating insights', _afterNewData));
+        return msg;
+      case IngestStatus.duplicate:
+        return 'Already recorded: the same bank reference, or the same payment within a minute, is '
+            'already in the list. Pick the sample again for a new reference.';
+      case IngestStatus.balance:
+        return 'Balance update only, no transaction.';
+      case IngestStatus.rejected:
+        return 'Ignored, as it should be: ${_reasons[parsed.reason] ?? parsed.reason}.';
+      case IngestStatus.skipped:
+        return 'Ignored: "$s" is not a bank sender.';
+      case IngestStatus.miss:
+        return 'This looks like a bank message, but no pattern matched it (${parsed.reason}). '
+            'It was added to the review list in Settings.';
+    }
   }
 
   // ------------------------------------------------------------ edits

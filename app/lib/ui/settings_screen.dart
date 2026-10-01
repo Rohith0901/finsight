@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../api/api_client.dart';
 import '../core/money.dart';
 import '../state/app_state.dart';
+import 'test_message_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key, this.onExport});
@@ -131,6 +132,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         title: const Text('Load demo data'),
         subtitle: const Text('Three months of a sample user\'s bank messages'),
         onTap: state.busy ? null : state.loadDemo,
+      ),
+      ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: const Icon(Icons.edit_note),
+        title: const Text('Test with a bank message'),
+        subtitle: const Text('Process a sample or pasted SMS as if it just arrived'),
+        onTap: () => Navigator.of(context)
+            .push(MaterialPageRoute<void>(builder: (_) => const TestMessageScreen())),
       ),
       FutureBuilder<List<Map<String, Object?>>>(
         future: state.repo.reviewItems(),
