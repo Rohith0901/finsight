@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+certs/
+ml/data/real/
+ml/data/exports/
+*.egg-info/
+.DS_Store
+# Flutter
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/local.properties
+app/android/.gradle/
+app/android/app/debug.keystore
+app/android/key.properties
+*.jks
+
+# Built app
+*.apk

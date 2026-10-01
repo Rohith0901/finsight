@@ -1,0 +1,30 @@
+{
+  "data": "synthetic; merchant-grouped 80/20 split; validation excludes merchants the phone resolves itself",
+  "validation_rows": 2017,
+  "segments": {
+    "local_shops": {
+      "rows": 1226,
+      "macro_f1": 0.9348,
+      "accuracy": 0.9821,
+      "coverage_at_threshold": 1.0,
+      "answered_accuracy": 0.9821
+    },
+    "anonymous_handles": {
+      "rows": 791,
+      "macro_f1": 0.1833,
+      "accuracy": 0.6422,
+      "coverage_at_threshold": 0.3755,
+      "answered_accuracy": 0.9731
+    }
+  },
+  "validation_macro_f1": 0.6731,
+  "C": 2.0,
+  "temperature": 0.6804,
+  "ece_before": 0.1066,
+  "ece_after": 0.0459,
+  "threshold": 0.3,
+  "threshold_anonymous": 0.75,
+  "coverage_at_threshold": 0.7551,
+  "answered_accuracy": 0.9803,
+  "train_rows": 21590
+}

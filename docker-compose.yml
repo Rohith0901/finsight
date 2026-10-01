@@ -1,0 +1,19 @@
+# Stateless API on the demo laptop. Ollama runs natively on the Mac (faster on
+# Apple silicon) and is reached through host.docker.internal.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file: .env
+    environment:
+      FINSIGHT_TLS_CERT: /certs/finsight.crt
+      FINSIGHT_TLS_KEY: /certs/finsight.key
+    volumes:
+      - ./certs:/certs:ro
+    ports:
+      - "8443:8443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    read_only: true
+    restart: unless-stopped

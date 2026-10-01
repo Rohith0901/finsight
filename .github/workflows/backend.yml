@@ -1,0 +1,17 @@
+name: backend and ML
+on:
+  push:
+    paths: ["backend/**", "ml/**", "shared/**", ".github/workflows/backend.yml"]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -e "backend[dev]" -r ml/requirements.txt
+      - run: ruff check backend ml
+      - run: cd backend && python -m pytest
+      - run: cd ml && python -m pytest

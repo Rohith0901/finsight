@@ -1,0 +1,200 @@
+{
+  "dataset_version": "synth-2026.09",
+  "model_version": "v1",
+  "users": 60,
+  "classifier_synthetic": {
+    "rows": 9634,
+    "model_macro_f1": 0.6698,
+    "model_accuracy": 0.8381,
+    "baseline_macro_f1": 0.7146,
+    "baseline_accuracy": 0.5215,
+    "baseline_coverage": 0.5289,
+    "coverage_at_threshold": 0.7084,
+    "answered_accuracy": 0.9783,
+    "per_class_f1": {
+      "entertainment": 0.7632,
+      "food": 0.9317,
+      "groceries": 0.7456,
+      "health": 0.4041,
+      "other": 0.3198,
+      "shopping": 0.8273,
+      "transport": 0.6967
+    },
+    "confusion": {
+      "labels": [
+        "entertainment",
+        "food",
+        "groceries",
+        "health",
+        "other",
+        "shopping",
+        "transport"
+      ],
+      "matrix": [
+        [
+          87,
+          10,
+          0,
+          16,
+          26,
+          1,
+          1
+        ],
+        [
+          0,
+          6231,
+          25,
+          168,
+          154,
+          2,
+          85
+        ],
+        [
+          0,
+          20,
+          296,
+          23,
+          109,
+          10,
+          8
+        ],
+        [
+          0,
+          19,
+          4,
+          159,
+          52,
+          7,
+          8
+        ],
+        [
+          0,
+          10,
+          0,
+          16,
+          134,
+          8,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          12,
+          49,
+          230,
+          1
+        ],
+        [
+          0,
+          420,
+          0,
+          144,
+          144,
+          3,
+          937
+        ]
+      ]
+    },
+    "model_accuracy_at_baseline_coverage": 0.9951,
+    "baseline_answered_accuracy": 0.9861,
+    "local_shops": {
+      "rows": 5466,
+      "model_accuracy": 0.9824,
+      "baseline_accuracy": 0.9191,
+      "coverage_at_threshold": 0.9998,
+      "answered_accuracy": 0.9826
+    },
+    "anonymous_handles": {
+      "rows": 4168,
+      "model_accuracy": 0.6488,
+      "baseline_accuracy": 0.0,
+      "coverage_at_threshold": 0.3263,
+      "answered_accuracy": 0.961
+    },
+    "ece": 0.0401,
+    "folds": 5
+  },
+  "classifier_real": null,
+  "recurring": {
+    "truth_series": 314,
+    "interval_amount": {
+      "precision": 0.9904,
+      "recall": 0.9841,
+      "f1": 0.9872,
+      "predicted": 312
+    },
+    "exact_monthly_baseline": {
+      "precision": 1.0,
+      "recall": 0.8726,
+      "f1": 0.932,
+      "predicted": 274
+    }
+  },
+  "anomalies": {
+    "log_mad_tail": {
+      "precision": 0.3654,
+      "recall": 0.4914,
+      "f1": 0.4191,
+      "tp": 57,
+      "fp": 99,
+      "fn": 59
+    },
+    "fixed_3x_mean": {
+      "precision": 0.2535,
+      "recall": 0.7845,
+      "f1": 0.3832,
+      "tp": 91,
+      "fp": 268,
+      "fn": 25
+    },
+    "isolation_forest": {
+      "precision": 0.2575,
+      "recall": 0.5948,
+      "f1": 0.3594,
+      "tp": 69,
+      "fp": 199,
+      "fn": 47
+    }
+  },
+  "forecast": {
+    "points": 720,
+    "mae_rupees": {
+      "run_rate": 9093,
+      "ewma": 6112,
+      "linear": 8580,
+      "auto": 6766
+    },
+    "smape_percent": {
+      "run_rate": 21.4,
+      "ewma": 15.8,
+      "linear": 23.4,
+      "auto": 17.3
+    },
+    "mae_rupees_by_cutoff_day": {
+      "8": {
+        "run_rate": 14702,
+        "ewma": 8068,
+        "linear": 12189,
+        "auto": 9384
+      },
+      "15": {
+        "run_rate": 7855,
+        "ewma": 6088,
+        "linear": 8447,
+        "auto": 6588
+      },
+      "22": {
+        "run_rate": 4724,
+        "ewma": 4179,
+        "linear": 5105,
+        "auto": 4327
+      }
+    },
+    "auto_chose": {
+      "ewma": 469,
+      "linear": 104,
+      "run_rate": 147
+    }
+  }
+}

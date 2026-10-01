@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "note": "Case-insensitive patterns. The phone adds a hint when its pattern matches the SMS text; the hints become the classifier's descriptor. Keep the syntax to what both Dart RegExp and Python re accept.",
+  "hints": {
+    "autopay": "\\b(auto ?pay|e-?mandate|mandate|standing instruction|nach|ecs)\\b",
+    "salary": "\\b(salary|sal cr|payroll)\\b",
+    "refund": "\\b(refund(ed)?|reversal|reversed)\\b",
+    "interest": "\\b(interest|int\\.? ?pd|int\\.? ?cr)\\b",
+    "cashback": "\\bcash ?back\\b",
+    "emi": "\\bemi\\b",
+    "ecom": "\\b(e-?com|online)\\b",
+    "atm": "\\b(atm|cash withdrawal)\\b"
+  }
+}

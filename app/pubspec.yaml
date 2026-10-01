@@ -1,0 +1,35 @@
+name: finsight
+description: Private, explainable spending from bank SMS.
+publish_to: none
+version: 0.1.0+1
+
+# Floors are kept low on purpose so `flutter pub get` can pick the newest
+# versions that work with your installed Flutter. If it still fails, run
+# `flutter upgrade` (Flutter 3.35 or newer is required).
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  crypto: ^3.0.3
+  flutter_secure_storage: ">=9.2.0 <12.0.0"
+  http: ^1.2.0
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  provider: ^6.1.2
+  sqflite_common: ^2.5.4
+  sqflite_sqlcipher: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ">=5.0.0 <7.0.0"
+  sqflite_common_ffi: ^2.3.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/shared/
+    - assets/demo/

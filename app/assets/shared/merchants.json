@@ -1,0 +1,1364 @@
+{
+  "version": 1,
+  "matching": {
+    "normalize": "lowercase, replace every character outside a-z and 0-9 with a space, collapse spaces",
+    "substring_min_length": 5,
+    "rule": "An alias whose compact form (spaces removed) has at least substring_min_length characters matches anywhere inside the compact input. Shorter aliases must match whole tokens. The longest matching alias wins; ties go to the entry listed first."
+  },
+  "merchants": [
+    {
+      "id": "swiggy",
+      "name": "Swiggy",
+      "category": "food",
+      "aliases": [
+        "swiggy",
+        "bundl technologies"
+      ]
+    },
+    {
+      "id": "zomato",
+      "name": "Zomato",
+      "category": "food",
+      "aliases": [
+        "zomato"
+      ]
+    },
+    {
+      "id": "dominos",
+      "name": "Domino's",
+      "category": "food",
+      "aliases": [
+        "dominos",
+        "domino s",
+        "jubilant foodworks"
+      ]
+    },
+    {
+      "id": "mcdonalds",
+      "name": "McDonald's",
+      "category": "food",
+      "aliases": [
+        "mcdonalds",
+        "mcdonald s",
+        "hardcastle restaurants",
+        "westlife foodworld"
+      ]
+    },
+    {
+      "id": "kfc",
+      "name": "KFC",
+      "category": "food",
+      "aliases": [
+        "kfc",
+        "devyani international"
+      ]
+    },
+    {
+      "id": "starbucks",
+      "name": "Starbucks",
+      "category": "food",
+      "aliases": [
+        "starbucks",
+        "tata starbucks"
+      ]
+    },
+    {
+      "id": "burger_king",
+      "name": "Burger King",
+      "category": "food",
+      "aliases": [
+        "burger king",
+        "restaurant brands asia"
+      ]
+    },
+    {
+      "id": "pizza_hut",
+      "name": "Pizza Hut",
+      "category": "food",
+      "aliases": [
+        "pizza hut"
+      ]
+    },
+    {
+      "id": "subway",
+      "name": "Subway",
+      "category": "food",
+      "aliases": [
+        "subway"
+      ]
+    },
+    {
+      "id": "chaayos",
+      "name": "Chaayos",
+      "category": "food",
+      "aliases": [
+        "chaayos",
+        "sunshine teahouse"
+      ]
+    },
+    {
+      "id": "haldirams",
+      "name": "Haldiram's",
+      "category": "food",
+      "aliases": [
+        "haldiram",
+        "haldirams"
+      ]
+    },
+    {
+      "id": "cafe_coffee_day",
+      "name": "Cafe Coffee Day",
+      "category": "food",
+      "aliases": [
+        "cafe coffee day",
+        "coffee day",
+        "ccd"
+      ]
+    },
+    {
+      "id": "eatsure",
+      "name": "EatSure",
+      "category": "food",
+      "aliases": [
+        "eatsure",
+        "rebel foods",
+        "faasos",
+        "behrouz"
+      ]
+    },
+    {
+      "id": "box8",
+      "name": "Box8",
+      "category": "food",
+      "aliases": [
+        "box8"
+      ]
+    },
+    {
+      "id": "barbeque_nation",
+      "name": "Barbeque Nation",
+      "category": "food",
+      "aliases": [
+        "barbeque nation"
+      ]
+    },
+    {
+      "id": "instamart",
+      "name": "Swiggy Instamart",
+      "category": "groceries",
+      "aliases": [
+        "instamart",
+        "swiggy instamart"
+      ]
+    },
+    {
+      "id": "blinkit",
+      "name": "Blinkit",
+      "category": "groceries",
+      "aliases": [
+        "blinkit",
+        "grofers"
+      ]
+    },
+    {
+      "id": "zepto",
+      "name": "Zepto",
+      "category": "groceries",
+      "aliases": [
+        "zepto",
+        "kiranakart"
+      ]
+    },
+    {
+      "id": "bigbasket",
+      "name": "BigBasket",
+      "category": "groceries",
+      "aliases": [
+        "bigbasket",
+        "big basket",
+        "supermarket grocery supplies",
+        "bbnow"
+      ]
+    },
+    {
+      "id": "dmart",
+      "name": "DMart",
+      "category": "groceries",
+      "aliases": [
+        "dmart",
+        "d mart",
+        "avenue supermarts"
+      ]
+    },
+    {
+      "id": "jiomart",
+      "name": "JioMart",
+      "category": "groceries",
+      "aliases": [
+        "jiomart",
+        "jio mart"
+      ]
+    },
+    {
+      "id": "more_retail",
+      "name": "More",
+      "category": "groceries",
+      "aliases": [
+        "more retail",
+        "more supermarket"
+      ]
+    },
+    {
+      "id": "spencers",
+      "name": "Spencer's",
+      "category": "groceries",
+      "aliases": [
+        "spencers",
+        "spencer s retail"
+      ]
+    },
+    {
+      "id": "natures_basket",
+      "name": "Nature's Basket",
+      "category": "groceries",
+      "aliases": [
+        "natures basket",
+        "nature s basket"
+      ]
+    },
+    {
+      "id": "smart_bazaar",
+      "name": "Smart Bazaar",
+      "category": "groceries",
+      "aliases": [
+        "smart bazaar",
+        "reliance smart",
+        "reliance fresh"
+      ]
+    },
+    {
+      "id": "ratnadeep",
+      "name": "Ratnadeep",
+      "category": "groceries",
+      "aliases": [
+        "ratnadeep"
+      ]
+    },
+    {
+      "id": "country_delight",
+      "name": "Country Delight",
+      "category": "groceries",
+      "aliases": [
+        "country delight"
+      ]
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "category": "transport",
+      "aliases": [
+        "uber",
+        "uber india",
+        "uberrides"
+      ]
+    },
+    {
+      "id": "ola",
+      "name": "Ola",
+      "category": "transport",
+      "aliases": [
+        "ola",
+        "olacabs",
+        "ola cabs",
+        "ani technologies"
+      ]
+    },
+    {
+      "id": "rapido",
+      "name": "Rapido",
+      "category": "transport",
+      "aliases": [
+        "rapido",
+        "roppen transportation"
+      ]
+    },
+    {
+      "id": "namma_yatri",
+      "name": "Namma Yatri",
+      "category": "transport",
+      "aliases": [
+        "namma yatri"
+      ]
+    },
+    {
+      "id": "irctc",
+      "name": "IRCTC",
+      "category": "transport",
+      "aliases": [
+        "irctc"
+      ]
+    },
+    {
+      "id": "indian_oil",
+      "name": "Indian Oil",
+      "category": "transport",
+      "aliases": [
+        "indian oil",
+        "iocl"
+      ]
+    },
+    {
+      "id": "hp_petrol",
+      "name": "HP Petrol",
+      "category": "transport",
+      "aliases": [
+        "hpcl",
+        "hindustan petroleum",
+        "hp petrol"
+      ]
+    },
+    {
+      "id": "bharat_petroleum",
+      "name": "Bharat Petroleum",
+      "category": "transport",
+      "aliases": [
+        "bpcl",
+        "bharat petroleum"
+      ]
+    },
+    {
+      "id": "redbus",
+      "name": "redBus",
+      "category": "transport",
+      "aliases": [
+        "redbus",
+        "red bus"
+      ]
+    },
+    {
+      "id": "delhi_metro",
+      "name": "Delhi Metro",
+      "category": "transport",
+      "aliases": [
+        "dmrc",
+        "delhi metro"
+      ]
+    },
+    {
+      "id": "namma_metro",
+      "name": "Namma Metro",
+      "category": "transport",
+      "aliases": [
+        "bmrcl",
+        "namma metro",
+        "bangalore metro"
+      ]
+    },
+    {
+      "id": "mumbai_metro",
+      "name": "Mumbai Metro",
+      "category": "transport",
+      "aliases": [
+        "mumbai metro",
+        "mmopl"
+      ]
+    },
+    {
+      "id": "chennai_metro",
+      "name": "Chennai Metro",
+      "category": "transport",
+      "aliases": [
+        "cmrl",
+        "chennai metro"
+      ]
+    },
+    {
+      "id": "fastag",
+      "name": "FASTag",
+      "category": "transport",
+      "aliases": [
+        "fastag"
+      ]
+    },
+    {
+      "id": "indigo",
+      "name": "IndiGo",
+      "category": "transport",
+      "aliases": [
+        "indigo",
+        "interglobe aviation"
+      ]
+    },
+    {
+      "id": "air_india",
+      "name": "Air India",
+      "category": "transport",
+      "aliases": [
+        "air india"
+      ]
+    },
+    {
+      "id": "makemytrip",
+      "name": "MakeMyTrip",
+      "category": "transport",
+      "aliases": [
+        "makemytrip",
+        "make my trip"
+      ]
+    },
+    {
+      "id": "yulu",
+      "name": "Yulu",
+      "category": "transport",
+      "aliases": [
+        "yulu"
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "category": "shopping",
+      "aliases": [
+        "amazon",
+        "amazon seller services",
+        "amazon retail"
+      ]
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "category": "shopping",
+      "aliases": [
+        "flipkart"
+      ]
+    },
+    {
+      "id": "myntra",
+      "name": "Myntra",
+      "category": "shopping",
+      "aliases": [
+        "myntra"
+      ]
+    },
+    {
+      "id": "ajio",
+      "name": "AJIO",
+      "category": "shopping",
+      "aliases": [
+        "ajio"
+      ]
+    },
+    {
+      "id": "meesho",
+      "name": "Meesho",
+      "category": "shopping",
+      "aliases": [
+        "meesho",
+        "fashnear technologies"
+      ]
+    },
+    {
+      "id": "nykaa",
+      "name": "Nykaa",
+      "category": "shopping",
+      "aliases": [
+        "nykaa",
+        "fsn e commerce"
+      ]
+    },
+    {
+      "id": "decathlon",
+      "name": "Decathlon",
+      "category": "shopping",
+      "aliases": [
+        "decathlon"
+      ]
+    },
+    {
+      "id": "croma",
+      "name": "Croma",
+      "category": "shopping",
+      "aliases": [
+        "croma",
+        "infiniti retail"
+      ]
+    },
+    {
+      "id": "reliance_digital",
+      "name": "Reliance Digital",
+      "category": "shopping",
+      "aliases": [
+        "reliance digital"
+      ]
+    },
+    {
+      "id": "tata_cliq",
+      "name": "Tata CLiQ",
+      "category": "shopping",
+      "aliases": [
+        "tata cliq",
+        "tatacliq"
+      ]
+    },
+    {
+      "id": "lenskart",
+      "name": "Lenskart",
+      "category": "shopping",
+      "aliases": [
+        "lenskart"
+      ]
+    },
+    {
+      "id": "ikea",
+      "name": "IKEA",
+      "category": "shopping",
+      "aliases": [
+        "ikea"
+      ]
+    },
+    {
+      "id": "hm",
+      "name": "H&M",
+      "category": "shopping",
+      "aliases": [
+        "hennes mauritz"
+      ]
+    },
+    {
+      "id": "zara",
+      "name": "Zara",
+      "category": "shopping",
+      "aliases": [
+        "zara",
+        "inditex"
+      ]
+    },
+    {
+      "id": "westside",
+      "name": "Westside",
+      "category": "shopping",
+      "aliases": [
+        "westside",
+        "trent limited"
+      ]
+    },
+    {
+      "id": "uniqlo",
+      "name": "Uniqlo",
+      "category": "shopping",
+      "aliases": [
+        "uniqlo"
+      ]
+    },
+    {
+      "id": "snapdeal",
+      "name": "Snapdeal",
+      "category": "shopping",
+      "aliases": [
+        "snapdeal"
+      ]
+    },
+    {
+      "id": "firstcry",
+      "name": "FirstCry",
+      "category": "shopping",
+      "aliases": [
+        "firstcry"
+      ]
+    },
+    {
+      "id": "airtel",
+      "name": "Airtel",
+      "category": "utilities",
+      "aliases": [
+        "airtel",
+        "bharti airtel"
+      ]
+    },
+    {
+      "id": "jio",
+      "name": "Jio",
+      "category": "utilities",
+      "aliases": [
+        "jio",
+        "reliance jio",
+        "jiofiber",
+        "jio fiber",
+        "jio recharge",
+        "jio prepaid",
+        "jio postpaid"
+      ]
+    },
+    {
+      "id": "vi",
+      "name": "Vi",
+      "category": "utilities",
+      "aliases": [
+        "vodafone idea",
+        "vodafone"
+      ]
+    },
+    {
+      "id": "bsnl",
+      "name": "BSNL",
+      "category": "utilities",
+      "aliases": [
+        "bsnl"
+      ]
+    },
+    {
+      "id": "bescom",
+      "name": "BESCOM",
+      "category": "utilities",
+      "aliases": [
+        "bescom"
+      ]
+    },
+    {
+      "id": "tata_power",
+      "name": "Tata Power",
+      "category": "utilities",
+      "aliases": [
+        "tata power",
+        "tpddl"
+      ]
+    },
+    {
+      "id": "adani_electricity",
+      "name": "Adani Electricity",
+      "category": "utilities",
+      "aliases": [
+        "adani electricity",
+        "aeml"
+      ]
+    },
+    {
+      "id": "msedcl",
+      "name": "MSEDCL",
+      "category": "utilities",
+      "aliases": [
+        "msedcl",
+        "mahadiscom",
+        "mahavitaran"
+      ]
+    },
+    {
+      "id": "tangedco",
+      "name": "TANGEDCO",
+      "category": "utilities",
+      "aliases": [
+        "tangedco",
+        "tneb"
+      ]
+    },
+    {
+      "id": "tgspdcl",
+      "name": "TGSPDCL",
+      "category": "utilities",
+      "aliases": [
+        "tgspdcl",
+        "tsspdcl",
+        "apspdcl"
+      ]
+    },
+    {
+      "id": "bses",
+      "name": "BSES",
+      "category": "utilities",
+      "aliases": [
+        "bses"
+      ]
+    },
+    {
+      "id": "kseb",
+      "name": "KSEB",
+      "category": "utilities",
+      "aliases": [
+        "kseb"
+      ]
+    },
+    {
+      "id": "bwssb",
+      "name": "BWSSB",
+      "category": "utilities",
+      "aliases": [
+        "bwssb"
+      ]
+    },
+    {
+      "id": "mahanagar_gas",
+      "name": "Mahanagar Gas",
+      "category": "utilities",
+      "aliases": [
+        "mahanagar gas"
+      ]
+    },
+    {
+      "id": "indraprastha_gas",
+      "name": "Indraprastha Gas",
+      "category": "utilities",
+      "aliases": [
+        "indraprastha gas"
+      ]
+    },
+    {
+      "id": "indane",
+      "name": "Indane Gas",
+      "category": "utilities",
+      "aliases": [
+        "indane"
+      ]
+    },
+    {
+      "id": "hp_gas",
+      "name": "HP Gas",
+      "category": "utilities",
+      "aliases": [
+        "hp gas",
+        "hpgas"
+      ]
+    },
+    {
+      "id": "bharat_gas",
+      "name": "Bharat Gas",
+      "category": "utilities",
+      "aliases": [
+        "bharat gas",
+        "bharatgas"
+      ]
+    },
+    {
+      "id": "act_fibernet",
+      "name": "ACT Fibernet",
+      "category": "utilities",
+      "aliases": [
+        "act fibernet",
+        "atria convergence"
+      ]
+    },
+    {
+      "id": "hathway",
+      "name": "Hathway",
+      "category": "utilities",
+      "aliases": [
+        "hathway"
+      ]
+    },
+    {
+      "id": "tata_play",
+      "name": "Tata Play",
+      "category": "utilities",
+      "aliases": [
+        "tata play",
+        "tata sky"
+      ]
+    },
+    {
+      "id": "excitel",
+      "name": "Excitel",
+      "category": "utilities",
+      "aliases": [
+        "excitel"
+      ]
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "subscriptions",
+      "aliases": [
+        "netflix"
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "subscriptions",
+      "aliases": [
+        "spotify"
+      ]
+    },
+    {
+      "id": "youtube_premium",
+      "name": "YouTube Premium",
+      "category": "subscriptions",
+      "aliases": [
+        "youtube premium",
+        "google youtube",
+        "youtube"
+      ]
+    },
+    {
+      "id": "amazon_prime",
+      "name": "Amazon Prime",
+      "category": "subscriptions",
+      "aliases": [
+        "amazon prime",
+        "prime video",
+        "amazonprime"
+      ]
+    },
+    {
+      "id": "jiohotstar",
+      "name": "JioHotstar",
+      "category": "subscriptions",
+      "aliases": [
+        "jiohotstar",
+        "hotstar",
+        "jiocinema"
+      ]
+    },
+    {
+      "id": "sonyliv",
+      "name": "SonyLIV",
+      "category": "subscriptions",
+      "aliases": [
+        "sonyliv",
+        "sony liv"
+      ]
+    },
+    {
+      "id": "zee5",
+      "name": "ZEE5",
+      "category": "subscriptions",
+      "aliases": [
+        "zee5"
+      ]
+    },
+    {
+      "id": "apple_services",
+      "name": "Apple Services",
+      "category": "subscriptions",
+      "aliases": [
+        "apple services",
+        "apple com bill",
+        "itunes"
+      ]
+    },
+    {
+      "id": "google_play",
+      "name": "Google Play",
+      "category": "subscriptions",
+      "aliases": [
+        "google play",
+        "googleplay",
+        "google one",
+        "google storage"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "category": "subscriptions",
+      "aliases": [
+        "microsoft"
+      ]
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "category": "subscriptions",
+      "aliases": [
+        "adobe"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "category": "subscriptions",
+      "aliases": [
+        "linkedin"
+      ]
+    },
+    {
+      "id": "audible",
+      "name": "Audible",
+      "category": "subscriptions",
+      "aliases": [
+        "audible"
+      ]
+    },
+    {
+      "id": "apollo_pharmacy",
+      "name": "Apollo Pharmacy",
+      "category": "health",
+      "aliases": [
+        "apollo pharmacy",
+        "apollo 247",
+        "apollo hospitals"
+      ]
+    },
+    {
+      "id": "pharmeasy",
+      "name": "PharmEasy",
+      "category": "health",
+      "aliases": [
+        "pharmeasy"
+      ]
+    },
+    {
+      "id": "tata_1mg",
+      "name": "Tata 1mg",
+      "category": "health",
+      "aliases": [
+        "1mg",
+        "tata 1mg"
+      ]
+    },
+    {
+      "id": "netmeds",
+      "name": "Netmeds",
+      "category": "health",
+      "aliases": [
+        "netmeds"
+      ]
+    },
+    {
+      "id": "medplus",
+      "name": "MedPlus",
+      "category": "health",
+      "aliases": [
+        "medplus"
+      ]
+    },
+    {
+      "id": "practo",
+      "name": "Practo",
+      "category": "health",
+      "aliases": [
+        "practo"
+      ]
+    },
+    {
+      "id": "cultfit",
+      "name": "cult.fit",
+      "category": "health",
+      "aliases": [
+        "cultfit",
+        "cult fit",
+        "curefit"
+      ]
+    },
+    {
+      "id": "healthifyme",
+      "name": "HealthifyMe",
+      "category": "health",
+      "aliases": [
+        "healthifyme"
+      ]
+    },
+    {
+      "id": "lal_pathlabs",
+      "name": "Dr Lal PathLabs",
+      "category": "health",
+      "aliases": [
+        "lal pathlabs"
+      ]
+    },
+    {
+      "id": "thyrocare",
+      "name": "Thyrocare",
+      "category": "health",
+      "aliases": [
+        "thyrocare"
+      ]
+    },
+    {
+      "id": "bookmyshow",
+      "name": "BookMyShow",
+      "category": "entertainment",
+      "aliases": [
+        "bookmyshow",
+        "book my show",
+        "bigtree entertainment"
+      ]
+    },
+    {
+      "id": "pvr_inox",
+      "name": "PVR INOX",
+      "category": "entertainment",
+      "aliases": [
+        "pvr",
+        "pvr inox",
+        "inox"
+      ]
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "category": "entertainment",
+      "aliases": [
+        "steampowered",
+        "steam games"
+      ]
+    },
+    {
+      "id": "playstation",
+      "name": "PlayStation",
+      "category": "entertainment",
+      "aliases": [
+        "playstation",
+        "sony interactive"
+      ]
+    },
+    {
+      "id": "dream11",
+      "name": "Dream11",
+      "category": "entertainment",
+      "aliases": [
+        "dream11",
+        "dream sports"
+      ]
+    },
+    {
+      "id": "wonderla",
+      "name": "Wonderla",
+      "category": "entertainment",
+      "aliases": [
+        "wonderla"
+      ]
+    },
+    {
+      "id": "lic",
+      "name": "LIC",
+      "category": "other",
+      "aliases": [
+        "lic",
+        "life insurance corporation"
+      ]
+    },
+    {
+      "id": "policybazaar",
+      "name": "Policybazaar",
+      "category": "other",
+      "aliases": [
+        "policybazaar"
+      ]
+    },
+    {
+      "id": "acko",
+      "name": "ACKO",
+      "category": "other",
+      "aliases": [
+        "acko"
+      ]
+    },
+    {
+      "id": "zerodha",
+      "name": "Zerodha",
+      "category": "other",
+      "aliases": [
+        "zerodha"
+      ]
+    },
+    {
+      "id": "groww",
+      "name": "Groww",
+      "category": "other",
+      "aliases": [
+        "groww",
+        "nextbillion technology"
+      ]
+    },
+    {
+      "id": "upstox",
+      "name": "Upstox",
+      "category": "other",
+      "aliases": [
+        "upstox"
+      ]
+    },
+    {
+      "id": "udemy",
+      "name": "Udemy",
+      "category": "other",
+      "aliases": [
+        "udemy"
+      ]
+    },
+    {
+      "id": "coursera",
+      "name": "Coursera",
+      "category": "other",
+      "aliases": [
+        "coursera"
+      ]
+    },
+    {
+      "id": "unacademy",
+      "name": "Unacademy",
+      "category": "other",
+      "aliases": [
+        "unacademy",
+        "sorting hat technologies"
+      ]
+    },
+    {
+      "id": "nobroker",
+      "name": "NoBroker",
+      "category": "other",
+      "aliases": [
+        "nobroker"
+      ]
+    }
+  ],
+  "card_bill_aliases": [
+    "cred",
+    "cred club",
+    "dreamplug",
+    "credit card payment",
+    "cc payment",
+    "cc bill payment",
+    "card bill payment"
+  ],
+  "income_keywords": [
+    "salary",
+    "sal cr",
+    "payroll",
+    "stipend",
+    "interest",
+    "int pd",
+    "int cr",
+    "dividend",
+    "cashback",
+    "reward"
+  ],
+  "names": {
+    "legal_suffixes": [
+      "private limited",
+      "pvt ltd",
+      "pvt",
+      "ltd",
+      "limited",
+      "llp",
+      "inc",
+      "opc"
+    ],
+    "business_words": [
+      "academy",
+      "agencies",
+      "agency",
+      "arena",
+      "associates",
+      "association",
+      "authority",
+      "bakers",
+      "bakery",
+      "bank",
+      "bar",
+      "bazaar",
+      "bazar",
+      "beauty",
+      "bhandar",
+      "bhojanalaya",
+      "biryani",
+      "board",
+      "book",
+      "books",
+      "broadband",
+      "cafe",
+      "canteen",
+      "care",
+      "center",
+      "centre",
+      "chaat",
+      "chemist",
+      "chemists",
+      "church",
+      "cinema",
+      "cinemas",
+      "clinic",
+      "club",
+      "coaching",
+      "coffee",
+      "collections",
+      "college",
+      "company",
+      "consultancy",
+      "corner",
+      "corporation",
+      "council",
+      "court",
+      "dairy",
+      "decor",
+      "department",
+      "depot",
+      "dept",
+      "dhaba",
+      "diagnostics",
+      "electronics",
+      "emporium",
+      "enterprise",
+      "enterprises",
+      "exports",
+      "fashion",
+      "federation",
+      "finance",
+      "food",
+      "foods",
+      "footwear",
+      "foundation",
+      "fresh",
+      "fruits",
+      "fuel",
+      "fuels",
+      "gaming",
+      "garments",
+      "gas",
+      "general",
+      "gift",
+      "gifts",
+      "government",
+      "govt",
+      "handloom",
+      "hardware",
+      "hospital",
+      "hotel",
+      "hotels",
+      "house",
+      "idli",
+      "industries",
+      "institute",
+      "insurance",
+      "juice",
+      "kirana",
+      "kitchen",
+      "labs",
+      "laundry",
+      "lounge",
+      "mall",
+      "mart",
+      "medical",
+      "medicals",
+      "mess",
+      "milk",
+      "mobiles",
+      "momos",
+      "mosque",
+      "motors",
+      "multiplex",
+      "municipal",
+      "nagar",
+      "network",
+      "office",
+      "optical",
+      "opticals",
+      "panchayat",
+      "parking",
+      "parlour",
+      "pay",
+      "payments",
+      "petrol",
+      "pharmacy",
+      "physiotherapy",
+      "pizza",
+      "plaza",
+      "point",
+      "police",
+      "post",
+      "power",
+      "provision",
+      "provisions",
+      "pub",
+      "railway",
+      "railways",
+      "rentals",
+      "restaurant",
+      "retail",
+      "salon",
+      "school",
+      "service",
+      "services",
+      "shawarma",
+      "shop",
+      "shoppe",
+      "society",
+      "solutions",
+      "stall",
+      "stand",
+      "station",
+      "stationery",
+      "store",
+      "stores",
+      "studio",
+      "supermarket",
+      "supply",
+      "sweets",
+      "systems",
+      "tailors",
+      "tea",
+      "tech",
+      "technologies",
+      "temple",
+      "textiles",
+      "tiffin",
+      "tours",
+      "traders",
+      "trading",
+      "travels",
+      "trust",
+      "turf",
+      "tyres",
+      "union",
+      "university",
+      "vegetables",
+      "watch",
+      "watches",
+      "water",
+      "wines",
+      "works",
+      "xerox",
+      "zone"
+    ],
+    "person_min_tokens": 2,
+    "person_max_tokens": 4,
+    "person_rule": "2 to 4 alphabetic tokens, at least one of 3+ letters, none of them a business word"
+  },
+  "vpa": {
+    "qr_handle_prefixes": [
+      "paytmqr",
+      "bharatpe",
+      "gpay-",
+      "upiqr",
+      "mab.",
+      "pos.",
+      "qr."
+    ],
+    "qr_handle_pattern": "^q[0-9]{5,}$",
+    "business_psp_markers": [
+      "biz"
+    ],
+    "personal_psps": [
+      "okaxis",
+      "okicici",
+      "okhdfcbank",
+      "oksbi",
+      "ybl",
+      "ibl",
+      "axl",
+      "paytm",
+      "ptyes",
+      "ptaxis",
+      "pthdfc",
+      "ptsbi",
+      "apl",
+      "yapl",
+      "upi",
+      "fbl",
+      "ikwik",
+      "freecharge",
+      "pingpay",
+      "waicici",
+      "wahdfcbank",
+      "waaxis",
+      "wasbi",
+      "kotak",
+      "idfcfirst",
+      "icici",
+      "hdfcbank",
+      "sbi",
+      "axisbank"
+    ],
+    "single_token_person_min_length": 4,
+    "single_token_rule": "On a personal PSP, a handle that is a single alphabetic word of at least single_token_person_min_length letters once digits are removed is a person, unless a business word of 4 or more letters appears inside it: aishwaryakhan@okaxis is a person, balajistores@ybl is a shop."
+  }
+}

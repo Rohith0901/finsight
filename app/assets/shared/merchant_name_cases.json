@@ -1,0 +1,622 @@
+{
+ "salt": "test-salt",
+ "note": "Checked by hand. Both names.py and normalizer.dart must reproduce every row.",
+ "cases": [
+  {
+   "raw": "SWIGGY",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "swiggy",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Swiggy Limited",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "swiggy",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "swiggy@icici",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "swiggy",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "BUNDL TECHNOLOGIES PVT LTD",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "swiggy",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "swiggyinstamart@icici",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "instamart",
+    "category": "groceries",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "SWIGGY INSTAMART",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "instamart",
+    "category": "groceries",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Zomato Ltd",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "zomato",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "zomato-order@paytm",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "zomato",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "UBER INDIA SYSTEMS PVT LTD",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "uber",
+    "category": "transport",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "uberrides@hdfcbank",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "uber",
+    "category": "transport",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "OLACABS",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "ola",
+    "category": "transport",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "ola@ybl",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "ola",
+    "category": "transport",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "AMAZON PRIME VIDEO",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "amazon_prime",
+    "category": "subscriptions",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Amazon Seller Services",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "amazon",
+    "category": "shopping",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "NETFLIX.COM",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "netflix",
+    "category": "subscriptions",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "JIO RECHARGE",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "jio",
+    "category": "utilities",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "jiorecharge@okicici",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "jio",
+    "category": "utilities",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "RELIANCE JIO INFOCOMM",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "jio",
+    "category": "utilities",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "JIOMART",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "jiomart",
+    "category": "groceries",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Air India",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "air_india",
+    "category": "transport",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Tata 1mg",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "tata_1mg",
+    "category": "health",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "1MG TECHNOLOGIES",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "tata_1mg",
+    "category": "health",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "KFC",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "known",
+    "key": "kfc",
+    "category": "food",
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Motorola Store",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "motorola store",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "AGRICULTURE DEPT",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "agriculture dept",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Sri Balaji Sweets",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "sri balaji sweets",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "SHARMA MEDICAL STORES",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "sharma medical stores",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "ACME TECHNOLOGIES PVT LTD",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "acme technologies",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Ganesh Kirana Store",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "ganesh kirana store",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "RAHUL SHARMA",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:ab471a96c2",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "P SHARMA",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:1349883a65",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Priya",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "priya",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "PRIYA",
+   "p2a": true,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:2cc7483c8d",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "rahul.k@okaxis",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:4af09b0df0",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "9876543210@ybl",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:51d09943ba",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "sharmasweets@okbizaxis",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "sharmasweets",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "paytmqr281005050101abcd@paytm",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "qr",
+    "key": "",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Q123456789@ybl",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "qr",
+    "key": "",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "bharatpe.9000123456@fbpe",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "qr",
+    "key": "",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "CRED CLUB",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "cred club",
+    "category": null,
+    "card_bill": true
+   }
+  },
+  {
+   "raw": "cred.club@axisb",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "cred club",
+    "category": null,
+    "card_bill": true
+   }
+  },
+  {
+   "raw": "Blue Tokai",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:0dcd1b13b7",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Blue Tokai",
+   "p2a": false,
+   "p2m": true,
+   "expected": {
+    "kind": "merchant",
+    "key": "blue tokai",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "unknown",
+    "key": "",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "H M TRADERS",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "h m traders",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "Internet Cafe",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "internet cafe",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "steamed momos corner",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "steamed momos corner",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "apollo tyres",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "apollo tyres",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "SACRED HEART SCHOOL",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "sacred heart school",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "rahul.sharma99@okhdfcbank",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:ab471a96c2",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "7eleven store",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "7eleven store",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "aishwaryakhan@okaxis",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:bfb1f614a6",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "rahul99@oksbi",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "person",
+    "key": "person:7426baa0c2",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "balajistores@ybl",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "balajistores",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "sharmasweets@okicici",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "sharmasweets",
+    "category": null,
+    "card_bill": false
+   }
+  },
+  {
+   "raw": "zxq@ybl",
+   "p2a": false,
+   "p2m": false,
+   "expected": {
+    "kind": "merchant",
+    "key": "zxq",
+    "category": null,
+    "card_bill": false
+   }
+  }
+ ]
+}

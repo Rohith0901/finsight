@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    always_declare_return_types: true
+    avoid_print: true
+
+analyzer:
+  errors:
+    # The parser keeps long regex lines readable next to their Python twin.
+    lines_longer_than_80_chars: ignore

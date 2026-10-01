@@ -1,0 +1,6 @@
+# Pinned top-level runtime dependencies (pip resolves the rest).
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+numpy==2.4.6
+httpx==0.28.1

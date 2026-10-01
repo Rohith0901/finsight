@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finsight-api"
+version = "0.1.0"
+description = "Stateless FinSight service: categories, patterns, forecast, safe-to-spend and a grounded assistant."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.140,<1.0",
+  "uvicorn[standard]>=0.40",
+  "pydantic>=2.10,<3",
+  "numpy>=1.26",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.15"]
+
+[tool.setuptools.packages.find]
+include = ["finsight_api*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`:DeprecationWarning"]

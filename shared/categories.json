@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "unknown": "unknown",
+  "categories": [
+    {"id": "food", "name": "Food"},
+    {"id": "groceries", "name": "Groceries"},
+    {"id": "transport", "name": "Transport"},
+    {"id": "shopping", "name": "Shopping"},
+    {"id": "utilities", "name": "Utilities"},
+    {"id": "subscriptions", "name": "Subscriptions"},
+    {"id": "health", "name": "Health"},
+    {"id": "entertainment", "name": "Entertainment"},
+    {"id": "transfers", "name": "Transfers"},
+    {"id": "income", "name": "Income"},
+    {"id": "other", "name": "Other"}
+  ]
+}
