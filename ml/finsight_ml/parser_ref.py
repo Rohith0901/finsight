@@ -147,10 +147,19 @@ def _direction(body: str) -> str | None:
     return "credit" if c else None
 
 
+# Bank remarks glued after a payee ("J JOTHIMANI Info:P2A/624107..."): cut from
+# the first "Info", P2A/P2M marker or 6+ digit run, so the name stays a name.
+# Not applied to UPI handles, whose digits are part of the address.
+PARTY_NOISE = re.compile(r"(?:\s*[:/-]?\s*\binfo\b|[\s/:-]*\bp2[am]\b|\s*[/:-]?\s*[0-9]{6,})[\s\S]*$", I)
+
+
 def _clean_party(text: str | None) -> str | None:
     if not text:
         return None
-    t = text.strip().rstrip(".,;:").strip()
+    t = text.strip()
+    if "@" not in t:  # UPI handles keep their digits
+        t = PARTY_NOISE.sub("", t)
+    t = t.strip().rstrip(".,;:").strip()
     if not t or len(t) > 60 or not re.search(r"[A-Za-z]", t) or BAD_PARTY.search(t):
         return None
     return t

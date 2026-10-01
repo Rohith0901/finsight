@@ -32,6 +32,15 @@ def test_every_template_is_covered():
     assert {"transaction", "balance", "rejected", "skipped"} <= outcomes
 
 
+def test_bank_remarks_are_cut_from_payee_names():
+    from finsight_ml.parser_ref import _clean_party
+    # Seen on a real phone: the name, then the bank's remark and reference.
+    assert _clean_party("J JOTHIMANI Info:P2A/624107654321") == "J JOTHIMANI"
+    assert _clean_party("RAHUL K/P2M/512345") == "RAHUL K"
+    assert _clean_party("Infosys Ltd") == "Infosys Ltd"
+    assert _clean_party("q123456789@ybl") == "q123456789@ybl"
+
+
 def test_amounts_and_senders():
     assert to_paise("45,000.50") == 4500050
     assert to_paise("1,00,000") == 10000000

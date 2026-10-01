@@ -73,6 +73,13 @@ void main() {
 
   final parser = SmsParser(loadRules().hints);
 
+  test('bank remarks after a payee name are cut off, UPI handles are kept', () {
+    expect(SmsParser.cleanParty('J JOTHIMANI Info:P2A/624107654321'), 'J JOTHIMANI');
+    expect(SmsParser.cleanParty('RAHUL K/P2M/512345'), 'RAHUL K');
+    expect(SmsParser.cleanParty('Infosys Ltd'), 'Infosys Ltd');
+    expect(SmsParser.cleanParty('q123456789@ybl'), 'q123456789@ybl');
+  });
+
   test('amounts in every format', () {
     expect(toPaise('1,23,456.78'), 12345678);
     expect(toPaise('485.0'), 48500);

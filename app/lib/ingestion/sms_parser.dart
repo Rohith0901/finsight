@@ -126,9 +126,14 @@ class SmsParser {
     return c != null ? 'credit' : null;
   }
 
+  /// Bank remarks glued after a payee ("J JOTHIMANI Info:P2A/624107..."): cut
+  /// from the first "Info", P2A/P2M marker or 6+ digit run.
+  static final partyNoise = _re(r'(?:\s*[:/-]?\s*\binfo\b|[\s/:-]*\bp2[am]\b|\s*[/:-]?\s*[0-9]{6,})[\s\S]*$');
+
   static String? cleanParty(String? text) {
     if (text == null) return null;
     var t = text.trim();
+    if (!t.contains('@')) t = t.replaceFirst(partyNoise, '').trim(); // UPI handles keep their digits
     while (t.isNotEmpty && '.,;:'.contains(t[t.length - 1])) {
       t = t.substring(0, t.length - 1);
     }
