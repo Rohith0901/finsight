@@ -22,3 +22,6 @@ app/android/key.properties
 
 # Built app
 *.apk
+
+# Phone test helper
+phone-bridge/
